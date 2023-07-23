@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "billiarder-v2": "apps/billiarder-v2"
+    "client": "apps/client",
+    "server": "apps/server"
   }
 }

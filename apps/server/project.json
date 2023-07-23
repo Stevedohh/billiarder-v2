@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/billiarder-v2/src",
+  "sourceRoot": "apps/server/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,10 +9,10 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/apps/billiarder-v2",
-        "main": "apps/billiarder-v2/src/main.ts",
-        "tsConfig": "apps/billiarder-v2/tsconfig.app.json",
-        "assets": ["apps/billiarder-v2/src/assets"]
+        "outputPath": "dist/apps/server",
+        "main": "apps/server/src/main.ts",
+        "tsConfig": "apps/server/tsconfig.app.json",
+        "assets": ["apps/server/src/assets"]
       },
       "configurations": {
         "production": {
@@ -21,8 +21,8 @@
           "inspect": false,
           "fileReplacements": [
             {
-              "replace": "apps/billiarder-v2/src/environments/environment.ts",
-              "with": "apps/billiarder-v2/src/environments/environment.prod.ts"
+              "replace": "apps/server/src/environments/environment.ts",
+              "with": "apps/server/src/environments/environment.prod.ts"
             }
           ]
         }
@@ -31,11 +31,11 @@
     "serve": {
       "executor": "@nrwl/js:node",
       "options": {
-        "buildTarget": "billiarder-v2:build"
+        "buildTarget": "server:build"
       },
       "configurations": {
         "production": {
-          "buildTarget": "billiarder-v2:build:production"
+          "buildTarget": "server:build:production"
         }
       }
     },
@@ -43,14 +43,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/billiarder-v2/**/*.ts"]
+        "lintFilePatterns": ["apps/server/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/billiarder-v2"],
+      "outputs": ["coverage/apps/server"],
       "options": {
-        "jestConfig": "apps/billiarder-v2/jest.config.ts",
+        "jestConfig": "apps/server/jest.config.ts",
         "passWithNoTests": true
       }
     }
