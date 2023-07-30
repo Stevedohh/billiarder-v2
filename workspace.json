@@ -2,6 +2,9 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "billiard-game": "libs/billiard/game",
+    "billiard-helpers": "libs/billiard/helpers",
+    "billiard-types": "libs/billiard/types",
     "client": "apps/client",
     "server": "apps/server"
   }

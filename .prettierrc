@@ -1,3 +1,32 @@
 {
-  "singleQuote": true
+  "singleQuote": true,
+  "bracketSameLine": false,
+  "jsxSingleQuote": false,
+  "parser": "typescript",
+  "tabWidth": 2,
+  "printWidth": 120,
+  "semi": true,
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports"
+  ],
+  "importOrder": [
+    "^node:(.*)$",
+    "",
+    "^@billiard/(.*)$",
+    "",
+    "^~(.*)$",
+    "",
+    "^[./](?!.*\\.scss$).*$",
+    "",
+    "^(.*).scss",
+    ""
+  ],
+  "importOrderCaseInsensitive": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderParserPlugins": [
+    "classProperties",
+    "decorators-legacy",
+    "jsx",
+    "typescript"
+  ]
 }
